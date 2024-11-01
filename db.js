@@ -22,7 +22,6 @@ db.on("error", (err) => {
 db.on("disconnected", () => {
   console.log("Disconnected from MongoDB server");
 });
-
 // Gracefully closing the connection if Node.js process is terminated
 process.on("SIGINT", async () => {
   await mongoose.connection.close();
