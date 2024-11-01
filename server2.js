@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
+
 const db = require("./db");
 const bosyParser = require("body-parser");
 const Person = require("./models/person");
@@ -58,7 +60,7 @@ app.get("/Person/:workType", async function (req, res) {
     res.status(500).json({ error: "Failed to save data" });
   }
 });
-
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
   console.log("server run successfully");
 });
