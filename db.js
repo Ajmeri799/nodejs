@@ -3,10 +3,10 @@ require("dotenv").config();
 
 // Connect to MongoDB
 // mongoose.connect("mongodb://localhost:27017/hotel");
-mongoose.connect(process.env.MONGOOS_URL);
-// mongoose.connect(
-//   "mongodb+srv://joyasuvi:80admNIXHwydr5PB@cluster0.djd1y.mongodb.net/"
-// );
+// mongoose.connect(process.env.MONGOOS_URL);
+mongoose.connect(
+  "mongodb+srv://joyasuvi:80admNIXHwydr5PB@cluster0.djd1y.mongodb.net/"
+);
 // Connection events//80admNIXHwydr5PB
 const db = mongoose.connection;
 
