@@ -10,11 +10,11 @@ app.post("/Person", async function (req, res) {
   const data = req.body;
   const newPerson = new Person(data);
   //   newPerson
-  //     .save()
-  //     .then((savedPerson) => {
-  //       console.log("Data saved successfully");
-  //       res.status(200).json(savedPerson);
-  //     })
+      .save()
+      .then((savedPerson) => {
+        console.log("Data saved successfully");
+        res.status(200).json(savedPerson);
+      })
   //     .catch((error) => {
   //       console.log(error);
   //       res.status(500).json({ error: "Failed to save data" });
