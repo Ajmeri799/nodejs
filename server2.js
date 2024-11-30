@@ -9,7 +9,7 @@ app.use(bosyParser.json());
 app.post("/Person", async function (req, res) {
   const data = req.body;
   const newPerson = new Person(data);
-  //   newPerson
+    // newPerson
       .save()
       .then((savedPerson) => {
         console.log("Data saved successfully");
